@@ -1,0 +1,16 @@
+TARGET = myapp
+SOURCES = main.cpp
+
+QT_DIR = /usr
+QMAKE = $(QT_DIR)/bin/qmake
+
+all: $(TARGET)
+
+$(TARGET): $(SOURCES)
+	$(QMAKE) -makefile
+	make
+
+clean:
+	rm -f $(TARGET)
+	rm -f *.o
+	rm -f Makefile
